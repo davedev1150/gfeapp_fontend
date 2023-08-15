@@ -1,0 +1,22 @@
+import React from "react";
+import * as stockActions from "../../../actions/stock.action";
+import { useAppDispatch } from "../../../index";
+import { RootReducers } from "../../../reducers";
+
+import { useSelector } from "react-redux";
+type Props = {};
+
+export default function StockPage({}: Props) {
+  const dispatch = useAppDispatch();
+  const stockReducer = useSelector((state: RootReducers) => state.stockReducer);
+
+  React.useEffect(() => {
+    dispatch(stockActions.loadStock());
+  }, []);
+
+  return <div>Helloword
+
+
+  </div>;
+  // return <>{console.log(stockReducer.result)}</>;
+}
