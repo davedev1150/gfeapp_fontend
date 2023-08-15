@@ -5,7 +5,7 @@ type InstallationPageProps = {
 };
 
 const InstallationPage: React.FC<any> = () => {
-  return <div>InstallationPage</div>;
+  return <div>InstallationPage_Dev</div>;
 };
 
 export default InstallationPage;
